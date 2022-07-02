@@ -257,10 +257,12 @@ function generateContent(editorState: EditorState): string {
       const idsDisplay = $isMarkNode(node)
         ? ` id: [ ${node.getIDs().join(', ')} ] `
         : '';
+      const urlDisplay = idsDisplay ? '' :
+        typeof node.getURL === 'function' ? ` (${node.getURL()}) ` : '';
 
       res += `${isSelected ? SYMBOLS.selectedLine : ' '} ${indent.join(
         ' ',
-      )} ${nodeKeyDisplay} ${typeDisplay} ${idsDisplay} ${printNode(node)}\n`;
+      )} ${nodeKeyDisplay} ${typeDisplay} ${idsDisplay}${urlDisplay} ${printNode(node)}\n`;
 
       res += printSelectedCharsLine({
         indent,
