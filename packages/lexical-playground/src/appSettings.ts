@@ -28,7 +28,7 @@ export const isDevPlayground: boolean =
 
 export const DEFAULT_SETTINGS: Settings = {
   disableBeforeInput: false,
-  emptyEditor: isDevPlayground,
+  emptyEditor: isDevPlayground && !/\bprepopulate=true\b/.test(window.location.href),
   isAutocomplete: false,
   isCharLimit: false,
   isCharLimitUtf8: false,
