@@ -1148,8 +1148,8 @@ export default function ToolbarPlugin(): JSX.Element {
               activeEditor.dispatchCommand(FORMAT_TEXT_COMMAND, 'code');
             }}
             className={'toolbar-item spaced ' + (isCode ? 'active' : '')}
-            title="Insert code block"
-            aria-label="Insert code block">
+            title="Monospace"
+            aria-label="Monospace">
             <i className="format code" />
           </button>
           <button
