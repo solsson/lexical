@@ -220,7 +220,7 @@ function TextFormatFloatingToolbar({
           editor.dispatchCommand(FORMAT_TEXT_COMMAND, 'code');
         }}
         className={'popup-item spaced ' + (isCode ? 'active' : '')}
-        aria-label="Insert code block">
+        aria-label="Monospace">
         <i className="format code" />
       </button>
       <button
